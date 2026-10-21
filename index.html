@@ -548,7 +548,7 @@
             <div class="big-heart">💗</div>
             <!-- <p>Someone very special has a birthday today...</p> -->
             <p>This is real I swear💙</p>
-            <div class="hint">✨ TAP ANYWHERE TO BEGIN ✨</div>
+            <div class="hint">TAP ANYWHERE TO PLAY THE MUSIC 🎶</div>
         </div>
     </section>
     <section class="page" id="birthday">
@@ -686,20 +686,20 @@
             if (playing) {
                 welcomeMusicStarted = true;
                 const hint = document.querySelector("#welcome .hint");
-                if (hint) hint.textContent = "MUSIC IS PLAYING 💗 TAP AGAIN TO CONTINUE";
+                if (hint) hint.textContent = "✨ BOOP ME AGAIN! ✨";
                 return;
             }
 
             // Some browsers may still block playback; keep the visitor on the welcome slide.
             const hint = document.querySelector("#welcome .hint");
-            if (hint) hint.textContent = "TAP AGAIN TO TRY MUSIC 💗";
+            if (hint) hint.textContent = "TAP AGAIN TO PLAY MUSIC 💗";
         });
 
         function unlockGift() {
             candleBlown = true;
             flame.classList.add("out");
             countdownEl.textContent = "YEYYYYY!! 🎉";
-            messageEl.textContent = "IT WORKED! HAPPY BIRTHDAYYYYYY!!!!!";
+            messageEl.textContent = "HAPPY BIRTHDAYYYYYY!!!!!";
             startBtn.hidden = true;
             gift.classList.remove("locked");
             gift.classList.add("pulse");
