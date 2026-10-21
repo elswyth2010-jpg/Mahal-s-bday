@@ -535,6 +535,77 @@
                 padding: 16px 12px 28px
             }
         } */
+
+        /* Two animated story slides between the welcome and cake screens. */
+        .story-slide {
+            overflow-y: auto;
+            align-items: flex-start;
+            padding: clamp(18px, 4vh, 42px) 16px;
+            background: radial-gradient(circle at top left, #fff7fb, #ffe5ef 48%, #eee4ff);
+        }
+        .story-card {
+            width: min(760px, 100%);
+            margin: auto;
+            padding: clamp(22px, 4vw, 42px);
+            border: 1px solid #ffffffd9;
+            border-radius: 26px;
+            background: #ffffffd9;
+            box-shadow: 0 16px 42px #9d4f7920;
+            color: #59364b;
+        }
+        .story-kicker {
+            margin: 0 0 10px;
+            color: #d34e8c;
+            font-size: .78rem;
+            font-weight: 800;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+        }
+        .story-card h1 {
+            margin: 0 0 22px;
+            color: #b83272;
+            line-height: 1.2;
+        }
+        .story-copy p {
+            line-height: 1.85;
+            margin: 0 0 17px;
+            opacity: 0;
+            transform: translateY(13px);
+            animation: storyFadeUp .75s ease forwards;
+        }
+        .story-copy p:nth-child(1) { animation-delay: .12s; }
+        .story-copy p:nth-child(2) { animation-delay: .42s; }
+        .story-copy p:nth-child(3) { animation-delay: .72s; }
+        .story-copy p:nth-child(4) { animation-delay: 1.02s; }
+        .story-copy p:nth-child(5) { animation-delay: 1.32s; }
+        .story-copy p:nth-child(6) { animation-delay: 1.62s; }
+        .story-copy p:nth-child(7) { animation-delay: 1.92s; }
+        .story-copy p:nth-child(8) { animation-delay: 2.22s; }
+        .story-copy p:nth-child(9) { animation-delay: 2.52s; }
+        .story-copy p:nth-child(10) { animation-delay: 2.82s; }
+        .story-copy p:nth-child(11) { animation-delay: 3.12s; }
+        .story-copy p:nth-child(12) { animation-delay: 3.42s; }
+        .story-copy p:nth-child(13) { animation-delay: 3.72s; }
+        .story-copy .highlight {
+            color: #c12e78;
+            font-weight: 800;
+        }
+        @keyframes storyFadeUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .story-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 28px;
+        }
+        .story-actions button { cursor: pointer; }
+        @media (prefers-reduced-motion: reduce) {
+            .story-copy p { opacity: 1; transform: none; animation: none; }
+        }
+
     </style>
 </head>
 
@@ -549,6 +620,47 @@
             <!-- <p>Someone very special has a birthday today...</p> -->
             <p>This is real I swear💙</p>
             <div class="hint">TAP ANYWHERE TO PLAY THE MUSIC 🎶</div>
+        </div>
+    </section>
+    <section class="page story-slide" id="story1" aria-label="A little confession">
+        <div class="story-card">
+            <p class="story-kicker">A tiny confession 💌</p>
+            <h1>HAHAHAHA, YO!</h1>
+            <div class="story-copy">
+                <p>I really hope you like my little prank present. Well, of course... I mean, your silly person spent 15+ days making it for you.💝</p>
+                <p>Remember those nights I’d start acting all stupid? Saying things like “So proud of myself,” “Finally did it,” “Nandemonai,” and that whole coupon thing?</p>
+                <p>Hehehe. You probably had no idea what was going on, but behind all that nonsense, I was spending my nights writing codes, all for this little surprise.</p>
+                <p class="highlight">BUT HEHEHE, THE BEST PART IS STILL WAITING FOR YOU AT THE END.🤭</p>
+            </div>
+            <div class="story-actions">
+                <button class="secondary" onclick="showPage('welcome')">← Back</button>
+                <button class="primary" onclick="showStoryPage('story2')">Keep reading 💗 →</button>
+            </div>
+        </div>
+    </section>
+    <section class="page story-slide" id="story2" aria-label="Our little love story">
+        <div class="story-card">
+            <p class="story-kicker">A little piece of my heart 💗</p>
+            <h1>Us, through it all</h1>
+            <div class="story-copy">
+                <p>My heart choose you at first sight. Even though we were miles apart, even though ours was a long-distance relationship.</p>
+                <p>Two little hearts trying to figure out what love meant, learning as we went, making mistakes, sometimes misunderstanding each other, and sometimes not knowing how to handle everything we felt. But look at us now. We've come so far. This journey hasn't always been easy, but it's taught us how to trust each other, how to understand each other a little better, and how to keep choosing each other even when things aren't perfect. And I'm so grateful that we got to grow through all of it together.</p>
+                <p>You know, I forget things sometimes. Maybe that's just how my mind works, and honestly, I've learned to see a little blessing in it, because it helps me keep moving forward without carrying every little thing with me. But there are some things I never forget.</p>
+                <p class="highlight">Your smile. Your little giggles. Your laugh.</p>
+                <p>Those little pieces of you have somehow found a permanent home in my heart.</p>
+                <p>When I'm out somewhere, I think of you. I imagine you with me, and all I can think is, “Gosh, I wish you were here.” And then I find myself smiling or laughing like an idiot. I probably look ridiculous to everyone around me, but honestly? I couldn't care less. How could I possibly be embarrassed about someone who gives me so many reasons to smile?</p>
+                <p>And lately… I don't know what you've been doing to me.</p>
+                <p>Your little “yess,” “yes yes,” “ne ne,” and those “hahahaha” moments. The way you care about me, the little things you say, the way you show your affection without even realizing how much it means to me…</p>
+                <p class="highlight">YOU HAVE NO IDEA HOW SOFT YOU MAKE MY HEART.</p>
+                <p>It's like I'm falling for you all over again, but this time, it's in all these tiny, everyday moments. It's in your words, your laughter, your affection, and the little ways you make me feel loved even from miles away. Sometimes, the smallest things you do leave the biggest feelings in my heart, and I just sit there thinking, “How did I get so lucky to have this person in my life?”</p>
+                <p>I hope you never stop being this you. I hope you keep laughing with me, teasing me, caring for me, and making my heart flutter like an absolute maniac. Hehehe. Keep making me fall for you in all the little ways you do. And I hope I can make you feel just as loved, just as special, and just as happy.</p>
+                <p>And if I could go back to the very beginning, knowing everything I know now, all the mistakes we'd make, all the lessons we'd learn, all the distance we'd have to endure, and all the moments we'd share…</p>
+                <p class="highlight">I think I'd still look at you and fall in love.<br>Again. And again. And again. ❤️</p>
+            </div>
+            <div class="story-actions">
+                <button class="secondary" onclick="showStoryPage('story1')">← Back</button>
+                <button class="primary" onclick="startBirthday()">Shhh, your cake awaits 🎂 →</button>
+            </div>
         </div>
     </section>
     <section class="page" id="birthday">
@@ -648,7 +760,7 @@
             } catch (e) {
                 console.log("Audio unavailable", e);
                 // If the birthday melody cannot play, return to the background track.
-                if (backgroundMusicWanted) backgroundMusic.play().catch(() => { });
+                if (backgroundMusicWanted) backgroundMusic.play().catch(() => {});
             }
         }
 
@@ -656,6 +768,20 @@
             document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
             document.getElementById(id).classList.add("active");
             window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        function showStoryPage(id) {
+            showPage(id);
+            // Re-trigger the gentle paragraph reveal whenever a story slide is revisited.
+            const copy = document.querySelector(`#${id} .story-copy`);
+            if (copy) {
+                const paragraphs = [...copy.querySelectorAll("p")];
+                paragraphs.forEach(p => {
+                    p.style.animation = "none";
+                    void p.offsetHeight;
+                    p.style.animation = "";
+                });
+            }
         }
 
         const countdownEl = document.getElementById("countdown");
@@ -677,7 +803,7 @@
         document.getElementById("welcome").addEventListener("click", async () => {
             // If autoplay worked already, this click can continue to the birthday slide.
             if (!backgroundMusic.paused && !backgroundMusic.ended) {
-                startBirthday();
+                showStoryPage("story1");
                 return;
             }
 
@@ -692,7 +818,7 @@
 
             // Some browsers may still block playback; keep the visitor on the welcome slide.
             const hint = document.querySelector("#welcome .hint");
-            if (hint) hint.textContent = "TAP AGAIN TO PLAY MUSIC 💗";
+            if (hint) hint.textContent = "TAP AGAIN TO TRY MUSIC 💗";
         });
 
         function unlockGift() {
